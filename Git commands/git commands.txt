@@ -1,0 +1,66 @@
+Git bash commands
+pwd -> present working directory
+cd -> change directory
+cd .. -> change directory reverse
+ls -> list of files and directory
+vim -> open vim editor
+rm -rf -> remove directory
+
+Git commands
+git init -> Initialize git in a directory
+git status -> status of a git repository
+git config --global user.name "[uname]" -> set the git username as uname
+git config --global user.email "[uemail]" -> set the git user email as uemail
+git config --list -> git detail list
+git config --global code.editor [editorname] -> set the git editor to editor name
+git config user.name -> shows the git username
+git config user.email -> shows the git user email
+git add -> git add options
+git add --a -> add all the files to staging area
+git add . -> add all the files to staging area
+git add [filename] -> add the file filename to staging area
+git commit -m "commit message" -> take the snapshot/commit of the changes done in the file to git repository
+git commit -> open the code editor to write the git commit message
+git log -> shows all the git commit done upto now
+rm -rf .git -> remove the .git file from the directory
+git clone "clone git url" [directoryname] -> clones all the files from the remote repo url in a directory named directoryname
+touch .gitignore -> creates a file name .gitignore
+git diff -> shows the differences/compares working directory and staging area
+git diff --staged -> shows the differences/compares staging area and git repository/old commit
+git commit -a -m "direct commit" ->skips the staging area and commit
+git rm [filename] -> removes the filename from the directory and staged the changes
+git mv [filename1] [filename2] -> rename/move the file name from filename1 to filename2
+git rm --cached [filename] -> untrack the filename from the repository but doesnot delete it from the directory
+git log -p -> shows all the changes/differences between all the commits existed
+git log -p -[num] -> shows all the changes/differences between last given num commits
+git log --stat -> shows all the changes/differences between all the commits in short
+git log --pretty=oneline -> shows all the commits in one line
+git log --pretty=short -> shows all the commits in short with author and email
+git log --pretty=full -> shows all the commits in full with author and commiter
+git log --since=[num].[time] -> shows the commits within num.time num>0-9 & time>days,weeks,years
+git log --pretty=format:%h -- "%an" -> shows the git log output in format short commit hash and author name
+git log --pretty=format:%h -- "%ae" -> shows the git log output in format short commit hash and author email
+git restore --staged [filename] -> unstage the added file
+git checkout -- [filename] -> restore the changes done on filename to previous commit
+git restore [filename] -> restore the file
+git checkout -f -> restore the changes done on all files to previous commit
+git remote -> shows the branch in the remote repository
+git remote add origin [URL] -> Add files to remote repository origin to URL
+git remote -v -> shows the URL to push and pull
+git push -u origin master/[branch] -> push all the commited file to origin branchname
+ssh-keygen -t rsa -b 4096 -C "email" -> generates public/private rsa key pair
+eval $(ssh-agent -s) -> shows agent pid
+ssh-add ~/.ssh/id_rsa -> Adds identity to a given location
+tail ~/.ssh/id_rsa.pub -> shows the ssh key
+git config --global alias.[shortcut] [command] -> sets the alias shortcut for command  to make the command short
+git config --global alias.unstage 'restore --staged --' -> sets the alias for unstaging the file
+git checkout -b [branchname] -> creates a new branch name branchname and switch to that branch
+git branch -> shows all the branches showing * in current branch
+git checkout [branchname] -> switch to the branch name branchname
+git merge [branch1] -> merge the current branch to branch1
+git branch -v -> shows all the branch with its last commit and commit hash
+git branch --merged -> shows all the branches that are already merged
+git branch --no-merge -> shows all the branches that are not already merged
+git branch -d [branchname] -> delete the already merged branchname and shows error/warning if its not merged
+git branch -D [branchname] -> delete the merged branchname and shows doesnot shows any error/warning if its not merged
+
